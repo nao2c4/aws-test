@@ -12,6 +12,9 @@ dependencies = [
     "pyyaml>=6.0.2",
 ]
 
+[project.urls]
+Repository = "https://github.com/nao2c4/aws-test.git"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
