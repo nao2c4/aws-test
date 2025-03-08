@@ -20,6 +20,7 @@ build-backend = "hatchling.build"
 dev = [
     "ipykernel>=6.29.5",
     "pre-commit>=4.1.0",
+    "pytest>=8.3.5",
     "ruff>=0.9.10",
 ]
 
@@ -40,6 +41,14 @@ ignore = [
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
+[tool.ruff.lint.per-file-ignores]
+"tests/**.py" = ["S101"]
+
 [[tool.mypy.overrides]]
 module = ["scipy.*"]
 ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
