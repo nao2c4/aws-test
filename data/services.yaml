@@ -340,3 +340,9 @@
   - 予算超過時に E メールや SNS を通じたアラート通知
   - RI 使用率やカバレッジの監視によるリソース最適化
   - 複数ディメンション（サービス、アカウント、タグなど）にわたるコスト管理と追跡
+- service: Savings Plans
+  description: 1 年または 3 年間の使用コミットメント（1 時間あたりの USD 単位）と引き換えに、オンデマンド料金よりも低価格でリソースを利用できる柔軟な料金モデルです。Compute ***、EC2 Instance ***、Amazon SageMaker AI *** の 3 種類があり、各種 AWS サービスに適用されます。
+  usecases:
+  - 長期コミットメントにより、オンデマンド料金からのコスト削減
+  - Amazon EC2、AWS Lambda、Amazon SageMaker などのサービスの利用料金の最適化
+  - AWS Cost Explorer や予算アラートと連携し、最適なプランのレコメンデーションと管理
