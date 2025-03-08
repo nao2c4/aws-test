@@ -76,3 +76,33 @@
   - サーバーの構成管理と自動デプロイ
   - Chef や Puppet を利用した一貫した環境構築
   - 手動設定の手間を省く自動化プロセスの実現
+- service: AWS Auto Scaling
+  description: アプリケーションのパフォーマンスを一定に保つために、複数の AWS リソース（Amazon EC2 インスタンス、ECS タスク、DynamoDB テーブルやインデックス、Aurora Replicas など）を自動的にモニタリング・スケーリングするサービスです。
+  usecases:
+  - アプリケーションの需要に応じた自動リソース調整
+  - パフォーマンス維持とコスト最適化の両立
+  - EC2 Auto Scaling と連携し、複数サービス間でのスケーリングプランの構築
+- service: Amazon CloudWatch
+  description: AWS およびオンプレミス環境のシステム・アプリケーションのモニタリングや運用データの収集、アラーム設定を行うためのサービスです。
+  usecases:
+  - システム全体のパフォーマンス変化の監視
+  - ログ、メトリクス、イベントの統合ビューの取得
+  - 高解像度アラームの設定や自動アクションによる問題解決
+- service: AWS Compute Optimizer
+  description: 過去の使用率メトリクスを機械学習で分析し、Amazon EC2、EBS、AWS Lambda の最適な設定を推奨することで、コスト削減とパフォーマンス向上を図るサービスです。
+  usecases:
+  - リソースの過剰プロビジョニングの排除
+  - ワークロードに対する最適なハードウェア設定の提案
+  - 利用状況に基づくリソースの最適化とコスト管理
+- service: Amazon Managed Grafana
+  description: Grafana のフルマネージド版として、複数のデータソース（Amazon OpenSearch、CloudWatch、X-Ray、Timestream など）と連携し、運用メトリクスやログ、トレースを視覚化できるサービスです。
+  usecases:
+  - セキュリティや運用要件に準拠したダッシュボード作成
+  - 複数データソースの統合的な可視化
+  - リアルタイムなデータ分析とモニタリング
+- service: Amazon Managed Service for Prometheus
+  description: オープンソース Prometheus と同じデータモデルとクエリ言語を採用したサーバーレスのモニタリングサービスで、コンテナ化されたワークロードのメトリクス収集・クエリを自動スケールで実施します。
+  usecases:
+  - コンテナ環境の大規模なモニタリング
+  - セキュリティ統制されたデータアクセス
+  - 高可用性を実現するメトリクスの取り込みと保存
