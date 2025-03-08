@@ -430,3 +430,21 @@
   - オンプレミスの既存 vSphere ワークロードをクラウドに拡張・移行
   - ディザスタリカバリやハイブリッド IT 運用の効率化
   - VMware 環境との互換性を維持しながら、AWS のネイティブサービスの利点を享受
+- service: Amazon Elastic Container Registry (Amazon ECR)
+  description: 開発者が Docker コンテナイメージを簡単に保存、管理、デプロイできるフルマネージドの Docker コンテナレジストリです。Amazon Elastic Container Service (ECS) との統合により、開発から本番ワークフローまでを簡素化し、独自のコンテナリポジトリを運用する必要やインフラストラクチャのスケーリングを心配する必要がありません。IAM との統合でリソースレベルのアクセス制御も可能です。
+  usecases:
+  - コンテナ化アプリケーションのためのイメージの一元管理
+  - 高可用性・スケーラブルな環境でのイメージホスティングによる迅速なデプロイ
+  - セキュリティ制御とアクセス管理を行いながら、アプリケーションの更新を容易に実施
+- service: Amazon Elastic Container Service (Amazon ECS)
+  description: Docker コンテナをサポートする非常にスケーラブルで高性能なコンテナオーケストレーションサービスです。独自のオーケストレーションソフトウェアのインストールや仮想マシン (VM) クラスターの管理を不要にし、シンプルな API 呼び出しで Docker 対応アプリケーションの起動、停止、状態管理などが可能です。
+  usecases:
+  - コンテナ化されたアプリケーションのデプロイと自動スケーリング
+  - VM の管理負担を軽減し、迅速なコンテナ運用を実現
+  - ロードバランサー、CloudWatch、CloudFormation などと連携した統合運用環境の構築
+- service: Amazon Elastic Kubernetes Service (Amazon EKS)
+  description: AWS 上で Kubernetes を利用してコンテナ化されたアプリケーションのデプロイ、管理、スケーリングを簡単に行えるフルマネージドサービスです。複数の AWS アベイラビリティーゾーンにまたがって Kubernetes 管理インフラストラクチャを実行し、単一障害点を排除します。既存の Kubernetes ツールやプラグインとの互換性も認定されています。
+  usecases:
+  - 既存の Kubernetes 環境からのシームレスな移行
+  - コンテナ化されたアプリケーションのスケーラブルな運用
+  - Kubernetes コミュニティのツールやパートナーソリューションを活用した運用の最適化
