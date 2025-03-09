@@ -105,6 +105,8 @@ const checkAnswer = () => {
         // wrongService に追加して改行する。
         wrongService.textContent += `${correctService.service}\n`;
     }
+    // チェックを外す。
+    checked.checked = false;
 };
 
 // スクリプトが読み込まれたら、AWS サービス情報を取得する。
