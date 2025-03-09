@@ -83,6 +83,8 @@ const showAwsServices = () => {
     });
     // 結果をリセット。
     document.getElementById("result").textContent = "";
+    // 強調を解除。
+    document.getElementById("result").classList.remove("correct", "incorrect");
 }
 
 /**
@@ -100,12 +102,16 @@ const checkAnswer = () => {
     // チェックされた要素のラベルと、正解のサービス名が一致するかどうかをチェック。
     if (checked.labels[0].textContent === correctService.service) {
         document.getElementById("result").textContent = "正解！";
+        // 特定のクラスを追加して、正解の文字を強調。
+        document.getElementById("result").classList.add("correct");
     } else {
         document.getElementById("result").textContent = "不正解…";
         // 不正解の場合は、正解のサービスを #wrong-services に追加。
         const wrongService = document.getElementById("wrong-services");
         // wrongService に追加して改行する。
         wrongService.textContent += `${correctService.service}\n`;
+        // 特定のクラスを追加して、不正解の文字を強調。
+        document.getElementById("result").classList.add("incorrect");
     }
     // チェックを外す。
     checked.checked = false;
