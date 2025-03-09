@@ -83,6 +83,30 @@ const showAwsServices = () => {
     });
 }
 
+/**
+ * 回答をチェックする。
+ * @function checkAnswer
+ * @description 回答が正しいかどうかをチェックします。
+ */
+const checkAnswer = () => {
+    // #choices-form 内の ratio 要素の中で、チェックが入っている要素を取得。
+    const checked = document.querySelector("#choices-form input:checked");
+    // チェックが入っている要素がない場合は、処理を中断。
+    if (!checked) {
+        return;
+    }
+    // チェックされた要素のラベルと、正解のサービス名が一致するかどうかをチェック。
+    if (checked.labels[0].textContent === correctService.service) {
+        document.getElementById("result").textContent = "正解！";
+    } else {
+        document.getElementById("result").textContent = "不正解…";
+        // 不正解の場合は、正解のサービスを #wrong-services に追加。
+        const wrongService = document.getElementById("wrong-services");
+        // wrongService に追加して改行する。
+        wrongService.textContent += `${correctService.service}\n`;
+    }
+};
+
 // スクリプトが読み込まれたら、AWS サービス情報を取得する。
 document.addEventListener("DOMContentLoaded", async () => {
     awsServices = await getAwsServices();
