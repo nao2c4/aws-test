@@ -111,4 +111,9 @@ const checkAnswer = () => {
 document.addEventListener("DOMContentLoaded", async () => {
     awsServices = await getAwsServices();
     console.log(awsServices);
+    showAwsServices();
 });
+
+// ボタンのクリックイベントを登録。
+document.getElementById("generate-question").addEventListener("click", showAwsServices);
+document.getElementById("check-answer").addEventListener("click", checkAnswer);

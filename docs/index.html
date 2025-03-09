@@ -12,6 +12,7 @@
 <body>
     <h1>AWS サービス問題</h1>
     <h2>概要に当てはまる AWS サービスを選んでください。</h2>
+    <button id="generate-question">出題</button>
     <p id="question"></p>
     <form id="choices-form">
         <div>
@@ -35,7 +36,7 @@
             <label for="choice5-radio" id="choice5"></label>
         </div>
     </form>
-    <button id="button">回答！</button>
+    <button id="check-answer">回答！</button>
     <p id="result"></p>
     <!-- 間違えたサービスを蓄積しておく。 -->
     <textarea id="wrong-services" readonly style="width: 100%; height: 20em; margin-top: 20px;"></textarea>
