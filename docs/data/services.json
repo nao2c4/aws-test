@@ -1333,7 +1333,7 @@
     },
     {
         "service": "AWS Shield",
-        "description": "AWS Shield は、ウェブアプリケーションを DDoS 攻撃から保護するフルマネージド型サービス。Standard は追加料金なしで基本的な DDoS 保護を提供し、Advanced はより大規模な攻撃に対する追加の検出・軽減機能、リアルタイム可視化、DRT へのアクセスを提供します。",
+        "description": "ウェブアプリケーションを DDoS 攻撃から保護するフルマネージド型サービス。Standard は追加料金なしで基本的な DDoS 保護を提供し、Advanced はより大規模な攻撃に対する追加の検出・軽減機能、リアルタイム可視化、DRT へのアクセスを提供します。",
         "usecases": [
             "AWS リソース（CloudFront、Route 53、ELB など）の自動 DDoS 保護",
             "高度な DDoS 攻撃への対策とリアルタイムモニタリングによる可用性維持",
