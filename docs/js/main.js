@@ -81,6 +81,8 @@ const showAwsServices = () => {
         const ratio = document.getElementById(`choice${i + 1}`);
         ratio.textContent = service.service;
     });
+    // 結果をリセット。
+    document.getElementById("result").textContent = "";
 }
 
 /**
