@@ -10,12 +10,24 @@
  * @description AWS サービス情報の読み込みと操作を行うモジュール。
  */
 
-// モジュールのコード...
-// AWS サービス情報を保持しておく変数。
+/**
+ * AWS サービス情報を保持しておく変数。
+ * @type {Object|null}
+ */
 let awsServices = null;
 
-// AWS サービス情報の JSON ファイルのパス。
+/**
+ * AWS サービス情報を含む JSON ファイルへのパス。
+ * @type {string}
+ * @constant
+ */
 const awsServicesJsonPath = "data/services.json";
+
+/**
+ * 現在の問題の正解となる AWS サービスの名前。
+ * @type {Object|null}
+ */
+let correctAnswer = null;
 
 /**
  * AWS サービスのデータを JSON ファイルから取得。
@@ -40,6 +52,31 @@ const getRandomAwsServices = (num) => {
     const start = Math.floor(Math.random() * (awsServices.length - num + 1));
     return awsServices.slice(start, start + num);
 };
+
+/**
+ * 配列をシャッフルする。
+ * @params {Array} array - シャッフルする配列。
+ * @returns {Array} - シャッフルされた配列。
+ */
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
+/**
+ * サービスを 5 個選び、HTML に表示する。
+ * @function showAwsServices
+ * @description ランダムに選ばれた 5 つの AWS サービスを表示します。
+ */
+const showAwsServices = () => {
+    const services = shuffleArray(getRandomAwsServices(5));
+    correctService = services[Math.floor(Math.random() * 5)];
+    // 概要を表示。
+    document.getElementById("question").textContent = correctService.description;
+}
 
 // スクリプトが読み込まれたら、AWS サービス情報を取得する。
 document.addEventListener("DOMContentLoaded", async () => {
