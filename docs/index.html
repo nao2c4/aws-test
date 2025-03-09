@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS サービス問題</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <h1>AWS サービス問題</h1>
+    <h2>概要に当てはまる AWS サービスを選んでください。</h2>
+    <button id="generate-question">出題</button>
+    <p id="question"></p>
+    <form id="choices-form">
+        <div>
+            <input type="radio" id="choice1-radio" name="service-choice" value="1">
+            <label for="choice1-radio" id="choice1"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice2-radio" name="service-choice" value="2">
+            <label for="choice2-radio" id="choice2"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice3-radio" name="service-choice" value="3">
+            <label for="choice3-radio" id="choice3"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice4-radio" name="service-choice" value="4">
+            <label for="choice4-radio" id="choice4"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice5-radio" name="service-choice" value="5">
+            <label for="choice5-radio" id="choice5"></label>
+        </div>
+    </form>
+    <button id="check-answer">回答！</button>
+    <p id="result"></p>
+    <!-- 間違えたサービスを蓄積しておく。 -->
+    <textarea id="wrong-services" readonly style="width: 100%; height: 20em; margin-top: 20px;"></textarea>
+</body>
+
+</html>
