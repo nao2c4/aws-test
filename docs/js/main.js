@@ -27,7 +27,7 @@ const awsServicesJsonPath = "data/services.json";
  * 現在の問題の正解となる AWS サービスの名前。
  * @type {Object|null}
  */
-let correctAnswer = null;
+let correctService = null;
 
 /**
  * AWS サービスのデータを JSON ファイルから取得。
@@ -76,6 +76,11 @@ const showAwsServices = () => {
     correctService = services[Math.floor(Math.random() * 5)];
     // 概要を表示。
     document.getElementById("question").textContent = correctService.description;
+    // 選択肢を表示。
+    services.forEach((service, i) => {
+        const ratio = document.getElementById(`choice${i + 1}`);
+        ratio.textContent = service.name;
+    });
 }
 
 // スクリプトが読み込まれたら、AWS サービス情報を取得する。
