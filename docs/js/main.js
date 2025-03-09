@@ -7,7 +7,7 @@
  * @module awsServiceModule
  * @author nao2c4
  * @version 1.0.0
- * @description AWS サービス情報の読み込みと操作を行うモジュール
+ * @description AWS サービス情報の読み込みと操作を行うモジュール。
  */
 
 // モジュールのコード...

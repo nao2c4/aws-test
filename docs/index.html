@@ -9,8 +9,35 @@
 </head>
 
 <body>
-    <h1>Document</h1>
-    <p>Document</p>
+    <h1>AWS サービス問題</h1>
+    <h2>概要に当てはまる AWS サービスを選んでください。</h2>
+    <p id="question"></p>
+    <form id="choices-form">
+        <div>
+            <input type="radio" id="choice1-radio" name="service-choice" value="1">
+            <label for="choice1-radio" id="choice1"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice2-radio" name="service-choice" value="2">
+            <label for="choice2-radio" id="choice2"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice3-radio" name="service-choice" value="3">
+            <label for="choice3-radio" id="choice3"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice4-radio" name="service-choice" value="4">
+            <label for="choice4-radio" id="choice4"></label>
+        </div>
+        <div>
+            <input type="radio" id="choice5-radio" name="service-choice" value="5">
+            <label for="choice5-radio" id="choice5"></label>
+        </div>
+    </form>
+    <button id="button">回答！</button>
+    <p id="result"></p>
+    <!-- 間違えたサービスを蓄積しておく。 -->
+    <textarea id="wrong-services" readonly></textarea>
 </body>
 
 </html>
