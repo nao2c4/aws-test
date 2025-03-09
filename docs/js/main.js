@@ -79,7 +79,7 @@ const showAwsServices = () => {
     // 選択肢を表示。
     services.forEach((service, i) => {
         const ratio = document.getElementById(`choice${i + 1}`);
-        ratio.textContent = service.name;
+        ratio.textContent = service.service;
     });
 }
 
